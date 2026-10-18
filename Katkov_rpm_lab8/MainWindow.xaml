@@ -1,0 +1,66 @@
+﻿<Window x:Class="Katkov_rpm_lab8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Katkov_rpm_lab8"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="500" 
+        Width="700"
+        MinHeight="200"
+        MinWidth="300"
+        MaxHeight="800"
+        MaxWidth="1000"
+                >
+    <Grid>
+        <TextBlock x:Name="tbResult"
+           Text="Результат отобразится здесь"
+           FontSize="14"
+           FontWeight="SemiBold"
+           Foreground="DarkBlue"
+           TextWrapping="Wrap"
+           TextAlignment="Center"
+           Margin="0,10,0,0"/>
+        <TextBox x:Name="txtName"
+               Height="23"
+                 Width="54"
+                 FontSize="15" Margin="128,122,418,239" TextChanged="txtName_TextChanged">
+        </TextBox>
+        <TextBox x:Name="txtName2"
+       Height="23"
+         Width="54"
+         FontSize="15" Margin="372,125,174,236" TextChanged="txtName2_TextChanged">
+        </TextBox>
+        <ComboBox x:Name="cmbRole"
+                  Width="80"
+                  Height="28"
+                  SelectedIndex="0"
+                  IsEditable="False"
+                  SelectionChanged="cmbRole_SelectionChanged" Margin="187,122,233,234">
+            <ComboBoxItem Content="+"/>
+            <ComboBoxItem Content="-"/>
+            <ComboBoxItem Content="*"/>
+            <ComboBoxItem Content="/"/>
+        </ComboBox>
+        <Button x:Name="btnProcess"
+                Content="Вычислить"
+                Width="80"
+                Height="32"
+                Margin="115,176,405,176"
+                IsDefault="True"
+                IsEnabled="True"
+                ToolTip=""
+                Click="btnProcess_Click"/>
+        <Button x:Name="btnClear"
+                Content="Очистить"
+                Width="80"
+                Height="32"
+                Margin="359,176,161,176"
+                IsDefault="False"
+                IsEnabled="True"
+                ToolTip=""
+                Click="btnClear_Click"/>
+        
+    </Grid>
+</Window>
